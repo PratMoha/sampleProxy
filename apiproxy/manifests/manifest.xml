@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="Verify-API-Key-1" version="SHA-512:231ec461539cab963434dbba0f1525ddf633c644ef326d0f9313f220069d73dba309a80583e19e6bebdf99b310938e6afa0618f3cc4b343f26925e3fac639663"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:656bc5bec146d8e4dc667569291e0082f76f87e9479c56420eef35c0732d74c2fd676ba0fef596f7e3da5951526b80650e4a263f1e6062974f7b149508b4c44b"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:996ef507c90e9e2f7bd743b6a33b0e8d47943d16a10b46d87f541294db69cfe60511eac5997d317cc74b6b4fbc42144a020f63750a0300d695bbc959d863217c"/>
+    </TargetEndpoints>
+</Manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="sample">
+    <Basepaths>/sample</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1564664256216</CreatedAt>
+    <CreatedBy>pratyush.mohapatra1@tcs.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>sample</DisplayName>
+    <LastModifiedAt>1564839370317</LastModifiedAt>
+    <LastModifiedBy>pratyush.mohapatra1@tcs.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:f614a70ef23b1fa123fbcd8c125c30d318ee994145e5346835db04ea7ed18139a979d3fb1f0cfd9a1dc10003fd50bdbe3b6c9577d861f7fbd531553c726fbd29</ManifestVersion>
+    <Policies>
+        <Policy>Verify-API-Key-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
