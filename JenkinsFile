@@ -12,10 +12,10 @@ checkout scm
     
     stage('Build APIProxy Bundle') {
     
-       
-
-      zip dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
-      
+      steps {
+          // send build started notifications
+       zip dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
+      }
     }
 
     
