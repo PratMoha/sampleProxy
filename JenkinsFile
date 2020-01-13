@@ -30,7 +30,7 @@ pipeline {
        // sh '''#!/bin/bash
 
 //newman run CI_CD.postman_collection.json'''
-      }
+     // }
     }
   }
  
