@@ -8,6 +8,6 @@ node{
 	
 	zip dir: 'apiproxy', glob: '', zipFile: 'apiproxy.zip'
 
-	sh "curl -X GET \"http://mocktarget.apigee.net/json\""
+	bat "curl -X GET \"http://mocktarget.apigee.net/json\""
 	}
 }
