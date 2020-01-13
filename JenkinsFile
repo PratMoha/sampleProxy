@@ -1,14 +1,43 @@
-node{
-	stage("Checkout"){
-	
-	checkout scm
-	}
+pipeline {
+  agent any
+  stages {
+    
+    stage('Build APIProxy Bundle') {
+    
+      steps {
+          // send build started notifications
+       
+        sh '''#!/bin/bash
+export PATH=/Users/sjana2/Documents/POC/node-v10.15.1/bin/:$PATH
+cd /Users/sjana2/.jenkins/workspace/APIGEE_CI_CD_DEMO_master/
+zip -r CI_CD_PROXY apiproxy/'''
+      }
+    }
 
-	stage("Deploy"){
-	
-	zip dir: 'apiproxy', glob: '', zipFile: 'apiproxy.zip'
+    stage('Deploy APIProxy Bundle') {
+    
+      steps {
+          // send build started notifications
+       
+        sh '''#!/bin/bash
+export PATH=/Users/sjana2/Documents/POC/node-v10.15.1/bin/:$PATH
+cd /Users/sjana2/.jenkins/workspace/APIGEE_CI_CD_DEMO_master/
+chmod 777 deploy.sh
+./deploy.sh'''
+      }
+    }
 
-	 bat set "$token = curl -X GET \"http://mocktarget.apigee.net/json\""
-	 bat echo  %$token%
-	}
+    stage('Perform Integration Tests') {
+    
+      steps {
+          // send build started notifications
+       
+        sh '''#!/bin/bash
+export PATH=/Users/sjana2/Documents/POC/node-v10.15.1/bin/:$PATH
+cd test
+newman run CI_CD.postman_collection.json'''
+      }
+    }
+  }
+ 
 }
