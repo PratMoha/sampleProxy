@@ -3,4 +3,9 @@ node{
 	
 	checkout scm
 	}
+
+	stage("Deploy"){
+	
+	zip dir: 'apiproxy', glob: '', zipFile: 'apiproxy.zip'
+	}
 }
