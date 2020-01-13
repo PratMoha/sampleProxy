@@ -8,6 +8,7 @@ node{
 	
 	zip dir: 'apiproxy', glob: '', zipFile: 'apiproxy.zip'
 
-	bat "curl -X GET \"http://mocktarget.apigee.net/json\""
+	 bat set "$token = curl -X GET \"http://mocktarget.apigee.net/json\""
+	 echo The token is : %$token%
 	}
 }
