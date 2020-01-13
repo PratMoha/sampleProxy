@@ -12,25 +12,24 @@ pipeline {
       }
     }
 
-    stage('Deploy APIProxy Bundle') {
+    // stage('Deploy APIProxy Bundle') {
     
-      steps {
-          // send build started notifications
+    //   steps {
+    //       // send build started notifications
        
-        sh '''#!/bin/bash
-        ./deploy.sh'''
-      }
-    }
+    //     sh '''#!/bin/bash
+    //     ./deploy.sh'''
+    //   }
+    // }
 
-    stage('Perform Integration Tests') {
+    //stage('Perform Integration Tests') {
     
-      steps {
+     // steps {
           // send build started notifications
        
-        sh '''#!/bin/bash
-export PATH=/Users/sjana2/Documents/POC/node-v10.15.1/bin/:$PATH
-cd test
-newman run CI_CD.postman_collection.json'''
+       // sh '''#!/bin/bash
+
+//newman run CI_CD.postman_collection.json'''
       }
     }
   }
