@@ -7,7 +7,7 @@ pipeline {
       steps {
           // send build started notifications
        
-        sh '''#!/bin/bash
+       
 
       zip archive: true, dir: '/', glob: '', zipFile: 'nameOfFile'
       }
