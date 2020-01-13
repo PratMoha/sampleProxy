@@ -1,6 +1,10 @@
 pipeline {
   agent any
   stages {
+
+    stage('Checkout'){
+      checkout scm
+    }
     
     stage('Build APIProxy Bundle') {
     
@@ -9,7 +13,7 @@ pipeline {
        
        
 
-      zip archive: true, dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
+      zip dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
       }
     }
 
