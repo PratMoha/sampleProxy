@@ -8,30 +8,12 @@ pipeline {
           // send build started notifications
        
         sh '''#!/bin/bash
-        zip -r CI_CD_PROXY apiproxy/'''
+
+  zip -r CI_CD_PROXY apiproxy/'''
       }
     }
 
-    // stage('Deploy APIProxy Bundle') {
     
-    //   steps {
-    //       // send build started notifications
-       
-    //     sh '''#!/bin/bash
-    //     ./deploy.sh'''
-    //   }
-    // }
-
-    //stage('Perform Integration Tests') {
-    
-     // steps {
-          // send build started notifications
-       
-       // sh '''#!/bin/bash
-
-//newman run CI_CD.postman_collection.json'''
-     // }
-    }
   }
  
 }
