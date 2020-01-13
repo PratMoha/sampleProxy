@@ -9,7 +9,7 @@ pipeline {
        
         sh '''#!/bin/bash
 
-  zip -r CI_CD_PROXY apiproxy/'''
+      zip archive: true, dir: '/', glob: '', zipFile: 'nameOfFile'
       }
     }
 
