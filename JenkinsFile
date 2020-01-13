@@ -9,7 +9,7 @@ pipeline {
        
        
 
-      zip archive: true, dir: '/', glob: '', zipFile: 'nameOfFile'
+      zip archive: true, dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
       }
     }
 
