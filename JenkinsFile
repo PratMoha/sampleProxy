@@ -22,7 +22,7 @@ pipeline {
       steps {
           // send build started notifications
        
-        bat 'sh ./deploytest.sh'
+        bat 'sh ./deploy.sh'
       }
     }
 
