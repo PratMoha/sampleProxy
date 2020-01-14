@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+       color = "blue"
+   }
   stages {
     
     stage('Build APIProxy Bundle') {
@@ -10,7 +13,7 @@ pipeline {
        
 
       zip dir: 'testing', glob: '', zipFile: 'CI_CD_PROXY.zip'
-      bat 'sh user=tester'
+      
       }
     }
 
