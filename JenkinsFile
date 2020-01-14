@@ -18,9 +18,7 @@ pipeline {
       steps {
           // send build started notifications
        
-        sh '''#!/bin/bash
-chmod 777 deploy.sh
-./deploy.sh'''
+        sh './deploy.sh'
       }
     }
 
