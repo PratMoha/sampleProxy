@@ -1,19 +1,19 @@
 pipeline {
   agent any
-  
-
-    stage('Checkout'){
-
-checkout scm
-      }
-    
+  stages {
     
     stage('Build APIProxy Bundle') {
     
+      steps {
           // send build started notifications
-       zip dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
-      
+       
+       
+
+      zip dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
+      }
     }
 
+    
+  }
  
 }
