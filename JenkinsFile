@@ -9,7 +9,7 @@ pipeline {
        
        
 
-      zip dir: 'apiproxy', glob: '', zipFile: 'CI_CD_PROXY.zip'
+      zip dir: 'apiproxy', glob: '', zipFile: 'CI_CD_PROXY/apiproxy.zip'
       }
     }
 
