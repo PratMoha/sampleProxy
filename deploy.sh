@@ -1,7 +1,8 @@
 #!/bin/bash
 # store the whole response with the status at the and
-HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X POST --header "Authorization: Basic <Authorization_code>" -F "file=@CI_CD_PROXY.zip" "https://api.enterprise.apigee.com/v1/organizations/<org_name>/apis?action=import&name=CI_CD_DEMO")
+HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X GET   "http://mocktarget.apigee.net/json")
 
+echo "first one executed"
 # extract the body
 HTTP_BODY=$(echo $HTTP_RESPONSE | sed -e 's/HTTPSTATUS\:.*//g')
 
