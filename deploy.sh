@@ -24,7 +24,7 @@ fi
 DEPLOY_HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X POST --header "Content-Type: application/x-www-form-urlencoded" --header "Authorization: Basic cHJhdHl1c2gubW9oYXBhdHJhMUB0Y3MuY29tOk1hdmVyaWNrQDE=" "https://api.enterprise.apigee.com/v1/organizations/pratyush91/environments/test/apis/CI_CD_DEMO/revisions/$REVISION/deployments?override=true")
 # extract the status
 DEPLOY_HTTP_STATUS=$(echo $DEPLOY_HTTP_RESPONSE | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
-echo "third one executed" $DEPLOY_HTTP_STATUS
+echo "deployed status" $DEPLOY_HTTP_STATUS
 if [ $DEPLOY_HTTP_STATUS -eq 200  ]
         then
         echo "Proxy is deployed successfully [HTTP status: $HTTP_STATUS]"

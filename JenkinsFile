@@ -10,6 +10,7 @@ pipeline {
        
 
       zip dir: 'testing', glob: '', zipFile: 'CI_CD_PROXY.zip'
+      bat 'sh user=tester'
       }
     }
 
@@ -18,7 +19,7 @@ pipeline {
       steps {
           // send build started notifications
        
-        bat 'sh ./deploy.sh'
+        bat 'sh ./deploytest.sh'
       }
     }
 
