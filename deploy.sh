@@ -2,7 +2,7 @@
 # store the whole response with the status at the and
 HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X GET   "http://mocktarget.apigee.net/json")
 
-echo "first one executed"
+echo "first one executed" $HTTP_RESPONSE
 # extract the body
 HTTP_BODY=$(echo $HTTP_RESPONSE | sed -e 's/HTTPSTATUS\:.*//g')
 
