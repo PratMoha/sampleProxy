@@ -4,9 +4,13 @@ pipeline {
     
     stage('Build APIProxy Bundle') {
     
-     steps {
-            echo 'Hello World'
-         }
+      steps {
+          // send build started notifications
+       
+       
+
+      zip dir: 'apiproxy', glob: '', zipFile: 'nameOfFile'
+      }
     }
 
     
