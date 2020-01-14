@@ -13,6 +13,17 @@ pipeline {
       }
     }
 
+    stage('Deploy APIProxy Bundle') {
+    
+      steps {
+          // send build started notifications
+       
+        sh '''#!/bin/bash
+chmod 777 deploy.sh
+./deploy.sh'''
+      }
+    }
+
     
   }
  
