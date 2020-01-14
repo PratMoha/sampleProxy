@@ -18,7 +18,7 @@ pipeline {
       steps {
           // send build started notifications
        
-        sh 'deploy.sh'
+        sh './deploytest.sh'
       }
     }
 
