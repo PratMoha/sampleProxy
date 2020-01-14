@@ -5,10 +5,10 @@ HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X GET   "ht
 echo "first one executed" $HTTP_RESPONSE
 # extract the body
 HTTP_BODY=$(echo $HTTP_RESPONSE | sed -e 's/HTTPSTATUS\:.*//g')
-
+echo "second one executed" $HTTP_BODY
 # extract the status
 HTTP_STATUS=$(echo $HTTP_RESPONSE | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
-
+echo "third one executed" $HTTP_STATUS
 # print the body
 echo "$HTTP_BODY" > temp.json
 REVISION=$( grep -o '"revision" : *"[^"]*"' temp.json | grep -o '"[^"]*"$' | sed 's/"//g')
