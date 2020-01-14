@@ -18,7 +18,10 @@ pipeline {
       steps {
           // send build started notifications
        
-        sh '''./deploytest.sh'''
+        sh('''#!c:\path\to\bash.exe
+
+echo "I am in bash"
+''')
       }
     }
 
