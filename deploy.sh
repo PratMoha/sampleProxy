@@ -1,6 +1,6 @@
 #!/bin/bash
 # store the whole response with the status at the and
-HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X POST --header "Authorization: Basic cHJhdHl1c2gubW9oYXBhdHJhMUB0Y3MuY29tOk1hdmVyaWNrQDE=" -F "file=@CI_CD_PROXY/apiproxy.zip" "https://api.enterprise.apigee.com/v1/organizations/pratyush91/apis?action=import&name=CI_CD_DEMO")
+HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X POST --header "Authorization: Basic cHJhdHl1c2gubW9oYXBhdHJhMUB0Y3MuY29tOk1hdmVyaWNrQDE=" -F "file=@CI_CD_PROXY.zip" "https://api.enterprise.apigee.com/v1/organizations/pratyush91/apis?action=import&name=CI_CD_DEMO")
 
 echo "first one executed" $HTTP_RESPONSE
 # extract the body
